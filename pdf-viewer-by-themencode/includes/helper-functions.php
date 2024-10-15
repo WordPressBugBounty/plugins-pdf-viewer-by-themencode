@@ -203,66 +203,78 @@ if ( ! function_exists( 'tnc_pvfw_advertisement_update' ) ) {
 }
 
 
-// Check the current user's pdfviewer post count
-function tnc_pvfw_get_pdfviewer_post_count() {
-    $current_user = wp_get_current_user();
-    $args = array(
-        'post_type' => 'pdfviewer',
-        'post_status' => 'publish',
-        'posts_per_page' => -1
-    );
-    $pdfviewer_posts = new WP_Query($args);
 
-    return $pdfviewer_posts->found_posts;
+// Active Pro addon 
+function tnc_pvfw_lt_is_plugin_active( $plugin ) {
+	return in_array( $plugin, (array) get_option( 'active_plugins', array() ) );
 }
 
-add_action( 'transition_post_status', 'tnc_pvfw_restrict_viewer_count', 10, 3 );
-function tnc_pvfw_restrict_viewer_count($new_status, $old_status, $post) {
-    if ($new_status === 'publish' && $post->post_type === 'pdfviewer' && tnc_pvfw_get_pdfviewer_post_count() >= 5) {
-        
-		if( $old_status === 'publish' ){
-			return;
-		}
-		wp_delete_post($post->ID, true);
+if ( ! ( tnc_pvfw_lt_is_plugin_active( 'pvfw-vc-addon/pdf-viewer-for-wordpress-visual-composer-addon.php' ) || tnc_pvfw_lt_is_plugin_active( 'divi-pdf-viewer-for-wordpress/divi-pdf-viewer-for-wordpress.php' ) || tnc_pvfw_lt_is_plugin_active( 'display-pdf-viewer-for-wordpress-addon/display-pdf-viewer-for-wordpress-addon.php' ) || tnc_pvfw_lt_is_plugin_active( 'avada-pdf-viewer-for-wordpress/avada-pdf-viewer-for-wordpress.php' ) || tnc_pvfw_lt_is_plugin_active( 'preview-pvfw-addon/preview-pvfw-addon.php' ) || tnc_pvfw_lt_is_plugin_active( 'elementor-pdf-viewer-for-wordpress/elementor-pdf-viewer-for-wordpress-addon.php' )  || tnc_pvfw_lt_is_plugin_active( 'Navigative/navigative.php' ) ) ) {
+	// Check the current user's pdfviewer post count
+	function tnc_pvfw_get_pdfviewer_post_count() {
+		$current_user = wp_get_current_user();
+		$args = array(
+			'post_type' => 'pdfviewer',
+			'post_status' => 'publish',
+			'posts_per_page' => -1
+		);
+		$pdfviewer_posts = new WP_Query($args);
 
-        $error_msg = esc_html__('TNC FlipBook - PDF viewer for WordPress (Pro Version) is required to publish more than 5 viewers. ', 'pdf-viewer-for-wordpress');
-        $error_msg .= sprintf(
-            wp_kses(__('Pro version can be purchased from <a href="%s" target="_blank">https://codecanyon.net/item/pdf-viewer-for-wordpress/8182815</a>.', 'pdf-viewer-for-wordpress'),
-                array(
-                    'a' => array(
-                        'href' => array(),
-                        'target' => array()
-                    )
-                )
-            ),
-            esc_url('https://codecanyon.net/item/pdf-viewer-for-wordpress/8182815')
-        );
-        wp_die($error_msg);
-    }
-}
+		return $pdfviewer_posts->found_posts;
+	}
 
-// Display an admin notice on the 'Add New' page for the 'pdfviewer' post type
-function tnc_pvfw_upgrade_notice() {
-    global $pagenow, $post_type;
+	add_action( 'transition_post_status', 'tnc_pvfw_restrict_viewer_count', 10, 3 );
 
-    if ($pagenow == 'post-new.php' && $post_type == 'pdfviewer' && tnc_pvfw_get_pdfviewer_post_count() >= 5) {
-        $upgrade_msg = '<strong>You\'ve reached maximum Viewer Creation Limit!</strong> <br />';
-		$upgrade_msg .= esc_html__('To add more PDF Viewers, please upgrade to the Pro version, TNC FlipBook - PDF viewer for WordPress. ', 'pdf-viewer-for-wordpress');
-        $upgrade_msg .= sprintf(
-            wp_kses(__('You can purchase the Pro version from <a href="%s" target="_blank">https://codecanyon.net/item/pdf-viewer-for-wordpress/8182815</a>.', 'pdf-viewer-for-wordpress'),
-                array(
-                    'a' => array(
-                        'href' => array(),
-                        'target' => array()
+
+	function tnc_pvfw_restrict_viewer_count($new_status, $old_status, $post) {
+		if ($new_status === 'publish' && $post->post_type === 'pdfviewer' && tnc_pvfw_get_pdfviewer_post_count() >= 5) {
+			
+			if( $old_status === 'publish' ){
+				return;
+			}
+			wp_delete_post($post->ID, true);
+
+			$error_msg = esc_html__('TNC FlipBook - PDF viewer for WordPress (Pro Version) is required to publish more than 5 viewers. ', 'pdf-viewer-for-wordpress');
+			$error_msg .= sprintf(
+				wp_kses(__('Pro version can be purchased from <a href="%s" target="_blank">https://codecanyon.net/item/pdf-viewer-for-wordpress/8182815</a>.', 'pdf-viewer-for-wordpress'),
+					array(
+						'a' => array(
+							'href' => array(),
+							'target' => array()
+						)
 					)
-                )
-            ),
-            esc_url('https://codecanyon.net/item/pdf-viewer-for-wordpress/8182815')
-        );
-        printf('<div class="notice notice-warning is-dismissible"><p>%s</p></div>', $upgrade_msg);
-    }
-}
-add_action('admin_notices', 'tnc_pvfw_upgrade_notice');
+				),
+				esc_url('https://codecanyon.net/item/pdf-viewer-for-wordpress/8182815')
+			);
+			wp_die($error_msg);
+		}
+	}
+
+	// Display an admin notice on the 'Add New' page for the 'pdfviewer' post type
+	function tnc_pvfw_upgrade_notice() {
+		global $pagenow, $post_type;
+
+		if ($pagenow == 'post-new.php' && $post_type == 'pdfviewer' && tnc_pvfw_get_pdfviewer_post_count() >= 5) {
+			$upgrade_msg = '<strong>You\'ve reached maximum Viewer Creation Limit!</strong> <br />';
+			$upgrade_msg .= esc_html__('To add more PDF Viewers, please upgrade to the Pro version, TNC FlipBook - PDF viewer for WordPress. ', 'pdf-viewer-for-wordpress');
+			$upgrade_msg .= sprintf(
+				wp_kses(__('You can purchase the Pro version from <a href="%s" target="_blank">https://codecanyon.net/item/pdf-viewer-for-wordpress/8182815</a>.', 'pdf-viewer-for-wordpress'),
+					array(
+						'a' => array(
+							'href' => array(),
+							'target' => array()
+						)
+					)
+				),
+				esc_url('https://codecanyon.net/item/pdf-viewer-for-wordpress/8182815')
+			);
+			printf('<div class="notice notice-warning is-dismissible"><p>%s</p></div>', $upgrade_msg);
+		}
+	}
+	add_action('admin_notices', 'tnc_pvfw_upgrade_notice');
+
+} 
+
 
 
 // Display upgrate betabox in admin panel
@@ -297,12 +309,12 @@ function tnc_pvfw_lite_display_black_friday_notice() {
     }
 
     $currentDate = new DateTime();
-    $startDate = new DateTime('2023-11-20');
-    $endDate = new DateTime('2023-11-30');
+    $startDate = new DateTime('2024-11-20');
+    $endDate = new DateTime('2024-11-30');
 
     if ($currentDate >= $startDate && $currentDate <= $endDate) {
         echo '<div class="notice notice-info is-dismissible" id="tnc-pvfw-lite-black-friday-notice">
-            <p>🌟 <strong>Cyber Week Special:</strong> Get 30% Off on TNC FlipBook & all addons! Limited Time Offer – Act Fast and Save Big! <a href="https://codecanyon.net/item/pdf-viewer-for-wordpress/8182815/" class="button button-primary" style="margin-left: 10px;" target="_blank">Get TNC FlipBook</a> <a target="_blank" href="https://themencode.com/deals/" class="button button-secondary" style="margin-left: 10px;">Addon Deals</a></p>
+            <p>🌟 <strong>Cyber Week Special:</strong> Get 40% Off on TNC FlipBook & all addons! Limited Time Offer – Act Fast and Save Big! <a href="https://codecanyon.net/item/pdf-viewer-for-wordpress/8182815/" class="button button-primary" style="margin-left: 10px;" target="_blank">Get TNC FlipBook</a> <a target="_blank" href="https://themencode.com/deals/" class="button button-secondary" style="margin-left: 10px;">Addon Deals</a></p>
         </div>';
     }
 }

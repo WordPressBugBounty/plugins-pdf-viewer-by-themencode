@@ -3,7 +3,7 @@
  * Plugin Name: TNC PDF viewer
  * Plugin URI: https://themencode.com/tncflipbook-preview/
  * Description: The best PDF Reader & FlipBook Plugin for WordPress since 2014, Powers up your WordPress website with a smart and modern PDF Reader & Highly customizable FlipBook.
- * Version: 3.2.0
+ * Version: 3.3.0
  * Author: ThemeNcode LLC
  * Author URI: https://themencode.com
  * Text Domain: pdf-viewer-by-themencode
@@ -22,7 +22,7 @@ if ( ! defined( 'WPINC' ) ) {
 // Define constants.
 define( 'PVFW_LITE_PLUGIN_NAME', 'TNC PDF viewer' );
 define( 'PVFW_LITE_PLUGIN_DIR', 'pdf-viewer-by-themencode' );
-define( 'PVFW_LITE_PLUGIN_VERSION', '3.2.0' );
+define( 'PVFW_LITE_PLUGIN_VERSION', '3.3.0' );
 define( 'PVFW_LITE_WEB_DIR', 'pdf-viewer-by-themencode/web' );
 define( 'PVFW_LITE_BUILD_DIR', 'pdf-viewer-by-themencode/build' );
 define( 'PVFW_LITE_RESOURCES_DIR', 'pdf-viewer-by-themencode/tnc-resources' );
