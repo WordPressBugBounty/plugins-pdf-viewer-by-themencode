@@ -557,7 +557,7 @@ html[dir='rtl'] #sidebarContainer {
 }
 
 .loadingInProgress #sidebarContainer {
-  top: 36px;
+  top: 40px;
 }
 
 #outerContainer.sidebarResizing #sidebarContainer {
@@ -591,7 +591,7 @@ html[dir='rtl'] #outerContainer.sidebarOpen #sidebarContainer {
 }
 
 #sidebarContent {
-  top: 32px;
+  top: 40px;
   bottom: 0;
   overflow: auto;
   -webkit-overflow-scrolling: touch;
@@ -612,10 +612,10 @@ html[dir='rtl'] #sidebarContent {
   overflow: auto;
   -webkit-overflow-scrolling: touch;
   position: absolute;
-  top: 32px;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  top:50px;
+  right:0;
+  bottom:0;
+  left:0;
   outline: none;
 }
 #viewerContainer:not(.pdfPresentationMode) {
@@ -659,7 +659,7 @@ html[dir='rtl'] #outerContainer.sidebarOpen #viewerContainer:not(.pdfPresentatio
 
 #toolbarSidebar {
   width: 100%;
-  height: 32px;
+  height: 40px;
   background-color: #424242; /* fallback */
   background-image: url(images/texture.png),
                     linear-gradient(hsla(0,0%,30%,.99), hsla(0,0%,25%,.95));
@@ -694,7 +694,7 @@ html[dir='rtl'] #sidebarResizer {
 
 #toolbarContainer, .findbar, .secondaryToolbar {
   position: relative;
-  height: 32px;
+  height: 41px;
   background-color: #474747; /* fallback */
   background-image: url(images/texture.png),
                     linear-gradient(hsla(0,0%,32%,.99), hsla(0,0%,27%,.95));
@@ -722,6 +722,7 @@ html[dir='rtl'] #toolbarContainer, .findbar, .secondaryToolbar {
   height: 4px;
   background-color: #333;
   border-bottom: 1px solid #333;
+  margin-top:12px;
 }
 
 #loadingBar .progress {
@@ -768,7 +769,7 @@ html[dir='rtl'] #toolbarContainer, .findbar, .secondaryToolbar {
 }
 
 .findbar, .secondaryToolbar {
-  top: 32px;
+  top: 45px;
   position: absolute;
   z-index: 10000;
   height: auto;
@@ -795,7 +796,7 @@ html[dir='rtl'] #toolbarContainer, .findbar, .secondaryToolbar {
   height: auto;
 }
 html[dir='ltr'] .findbar {
-  left: 68px;
+  left: 78px;
 }
 html[dir='rtl'] .findbar {
   right: 68px;
@@ -836,7 +837,7 @@ html[dir='rtl'] #findInput[data-status="pending"] {
 }
 
 .secondaryToolbar {
-  padding: 6px;
+  padding: 0px;
   height: auto;
   z-index: 30000;
 }
@@ -848,7 +849,7 @@ html[dir='rtl'] .secondaryToolbar {
 }
 
 #secondaryToolbarButtonContainer {
-  max-width: 200px;
+  max-width: 260px;
   max-height: 400px;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
@@ -960,8 +961,8 @@ html[dir='rtl'] .findbar * {
 }
 
 #toolbarViewerRight .logo_block {
-  margin-top: 3px;
-  margin-right: 10px;
+  margin-top: 11px;
+  margin-right: 11px;
 }
 
 html[dir='ltr'] .splitToolbarButton {
@@ -986,8 +987,8 @@ html[dir='rtl'] .splitToolbarButton > .toolbarButton {
 .overlayButton {
   border: 0 none;
   background: none;
-  width: 32px;
-  height: 25px;
+  width: 40px;
+  height: 38px;
 }
 
 .toolbarButton > span {
@@ -1092,7 +1093,7 @@ html[dir='rtl'] .splitToolbarButtonSeparator {
   border: 1px solid transparent;
   border-radius: 2px;
   color: hsla(0,0%,100%,.8);
-  font-size: 12px;
+  font-size: 14px;
   line-height: 14px;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -1186,13 +1187,14 @@ html[dir='rtl'] .dropdownToolbarButton {
 }
 
 .dropdownToolbarButton > select {
-  min-width: 140px;
-  font-size: 12px;
-  color: hsl(0,0%,95%);
+  width:180px;
+  font-size: 13px;
+  color: rgba(249, 249, 250, 1);
   margin: 0;
-  padding: 3px 2px 2px;
+  padding: 2px 0px 2px 4px;
   border: none;
-  background: rgba(0,0,0,0); /* Opera does not support 'transparent' <select> background */
+  background-color: rgba(33, 45, 58, 0.5);
+  height:28px;
 }
 
 .dropdownToolbarButton > select > option {
@@ -1246,7 +1248,7 @@ html[dir='rtl'] #findNext {
    * All relevant containers have a size of 32x25 */
   position: absolute;
   display: inline-block;
-  top: 4px;
+  top: 7px;
   left: 7px;
 }
 
@@ -1394,6 +1396,7 @@ html[dir='rtl'] .toolbarButton.pdfSidebarNotification::after {
   width: auto;
   min-width: 100%;
   white-space: normal;
+  height:38px;
 }
 html[dir="ltr"] .secondaryToolbarButton {
   padding-left: 24px;
@@ -2468,3 +2471,43 @@ html[dir='rtl'] #documentPropertiesOverlay .row > * {
 .logo_text a img{
   max-height: 20px;
 }
+
+#documentProperties {
+  padding-bottom: 10px;
+}
+
+.findbar > div {
+  height:44px;
+  padding: 5px 10px;
+}
+
+.findbar .toolbarField {
+  height:20px;
+}
+
+.findbar .toolbarLabel {
+  color: #ffffff;
+  margin: 12px 5px 6px 4px;
+}
+
+.tnc_social_share {
+	margin-top:45px !important;
+}
+
+.logo_block {
+  display: none;
+}
+
+ 
+@media only screen and (max-width:344px) {
+  span#open_slink {
+    display: none;
+  } 
+  
+} 
+
+
+
+
+
+

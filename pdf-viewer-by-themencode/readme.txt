@@ -2,9 +2,9 @@
 Contributors: ThemeNcode, abdulawal39
 Tags: pdf, pdf viewer, pdf reader, pdf embed, pdf flipbook
 Requires at least: 4.6
-Tested up to: 6.6.2
+Tested up to: 6.7.2
 Requires PHP: 5.6
-Stable tag: 3.3.0
+Stable tag: 4.0.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
  
@@ -198,8 +198,11 @@ Documentation is available on this URL: https://docs.themencode.com/docs/pdf-vie
  
 == Changelog ==
 
-= 3.3.0 =
-* Misc. Improvements
+= 4.0.0 =
+* Slightly improved colors
+* Enlarged icon size
+* Enlarged Toolbar size
+* Misc. Other improvements
 
 = 3.2.0 =
 * Fixed issue with Return to Site URL field
