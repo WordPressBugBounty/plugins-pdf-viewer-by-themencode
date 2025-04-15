@@ -63,6 +63,8 @@ function pdf_viewer_addon_integration_menu() {
     $navigative_image =  plugin_dir_url(__FILE__).'../images/navigative.png';
     $preview_url  = "https://portal.themencode.com/downloads/preview-pdf-viewer-for-wordpress-addon/";
     $preview_image = plugin_dir_url(__FILE__).'../images/Preview-Icon.png';
+    $secure_image = plugin_dir_url(__FILE__).'../images/secure-pdf.png';
+    $secure_url   = 'https://portal.themencode.com/downloads/secure-pdfs-tnc-flipbook-addon/';
     
     
     ?>
@@ -85,7 +87,7 @@ function pdf_viewer_addon_integration_menu() {
                               <p> <?php _e( 'Life-saver for Divi users. Get some amazing Divi module which will help you to embed PDF viewers easily right from you Divi builder. Check this out now.', 'pdf-viewer-by-themencode');?></p>
                         </div>
                         <div class="item-btn">
-                             <a target="_blank" href="<?php echo esc_url($divi_url);?>"><?php _e( 'Get it now', 'pdf-viewer-by-themencode');?></a>
+                             <a target="_blank" href="<?php echo esc_url($divi_url);?>"><?php _e( 'Get Divi Addon', 'pdf-viewer-by-themencode');?></a>
                          </div>
                   </div>
                   <div class="addon-integration-item">
@@ -97,7 +99,7 @@ function pdf_viewer_addon_integration_menu() {
                               <p>  <?php _e( 'Use this addon and you will get several elements to show the PDF viewer in many ways. Embed PDF Viewer or create a link or image link and many more.', 'pdf-viewer-by-themencode');?></p>
                         </div>
                         <div class="item-btn">
-                            <a target="_blank" href="<?php echo esc_url($avada_url);?>"><?php _e( 'Get it now', 'pdf-viewer-by-themencode');?></a>
+                            <a target="_blank" href="<?php echo esc_url($avada_url);?>"><?php _e( 'Get Avada Addon', 'pdf-viewer-by-themencode');?></a>
                         </div>
                   </div>
                   <div class="addon-integration-item">
@@ -109,7 +111,7 @@ function pdf_viewer_addon_integration_menu() {
                               <p> <?php _e('This addon has various Widgets which will ease the process of showing PDF on your website in different manner. Save your time and work.', 'pdf-viewer-by-themencode');?></p>
                         </div>
                         <div class="item-btn">
-                            <a target="_blank" href="<?php echo esc_url($elementor_url);?>"><?php _e( 'Get it now', 'pdf-viewer-by-themencode');?></a>
+                            <a target="_blank" href="<?php echo esc_url($elementor_url);?>"><?php _e( 'Get Elementor Addon', 'pdf-viewer-by-themencode');?></a>
                         </div>
                   </div>
                   <div class="addon-integration-item">
@@ -121,7 +123,7 @@ function pdf_viewer_addon_integration_menu() {
                               <p> <?php _e( 'Bookshelf is the most unique and stylish way of presenting your PDF files. There are also List/Grid view options. You can open PDF Viewers as a PopUp or in a new tab', 'pdf-viewer-by-themencode');?></p>
                         </div>
                         <div class="item-btn">
-                                <a target="_blank" href="<?php echo esc_url( $display_url );?>"><?php _e( ' Get it now', 'pdf-viewer-by-themencode');?></a>
+                                <a target="_blank" href="<?php echo esc_url( $display_url );?>"><?php _e( 'Get Display Addon', 'pdf-viewer-by-themencode');?></a>
                          </div>
                   </div>
                   <div class="addon-integration-item">
@@ -133,7 +135,7 @@ function pdf_viewer_addon_integration_menu() {
                               <p><?php _e( 'If you are using WPBakery page builder on your website, you can get this addon to generate PDF Viewer shortcodes using WPBakery Page Builder interface.', 'pdf-viewer-by-themencode');?></p>
                         </div>
                         <div class="item-btn">
-                          <a target="_blank" href="<?php echo esc_url($wpbakery_url);?>"><?php _e( 'Get it now', 'pdf-viewer-by-themencode');?> </a>
+                          <a target="_blank" href="<?php echo esc_url($wpbakery_url);?>"><?php _e( 'Get WPBakery Addon', 'pdf-viewer-by-themencode');?> </a>
                         </div>
                   </div>
                   <div class="addon-integration-item">
@@ -145,7 +147,7 @@ function pdf_viewer_addon_integration_menu() {
                               <p> <?php _e( "This addon is useful if you want to have one viewer on a page but open multiple pdf's according to users click. You can have a list of PDF links on the sidebar using a widget.", "pdf-viewer-by-themencode");?> </p>
                         </div>
                         <div class="item-btn">
-                             <a target="_blank" href="<?php  echo esc_url($navigative_url);?>"> <?php _e( 'Get it now', 'pdf-viewer-by-themencode');?></a>
+                             <a target="_blank" href="<?php  echo esc_url($navigative_url);?>"> <?php _e( 'Get Navigative Addon', 'pdf-viewer-by-themencode');?></a>
                         </div>
                     </div>
                     <div class="addon-integration-item">
@@ -157,7 +159,7 @@ function pdf_viewer_addon_integration_menu() {
                               <p> <?php _e( "This addon, you can select specific pages of a PDF file and set restrictions for viewers. Restricted viewers will only see a partial view of those selected pages.", "pdf-viewer-by-themencode");?> </p>
                         </div>
                         <div class="item-btn">
-                             <a target="_blank" href="<?php  echo esc_url($preview_url);?>"> <?php _e( 'Get it now', 'pdf-viewer-by-themencode');?></a>
+                             <a target="_blank" href="<?php  echo esc_url($preview_url);?>"> <?php _e( 'Get Preview Addon', 'pdf-viewer-by-themencode');?></a>
                         </div>
                     </div>
                     <div class="addon-integration-item">
@@ -172,12 +174,27 @@ function pdf_viewer_addon_integration_menu() {
                             <a target="_blank" href="<?php echo esc_url($wpfile_url);?>"> <?php _e( 'Get it now', 'pdf-viewer-by-themencode');?> </a>
                          </div>
                     </div>
+                    <div class="addon-integration-item">
+                       <div class="image-wrap">
+                          <img src="<?php echo $secure_image;?>" alt="">
+                        </div>
+                        <div class="item-content">
+                              <h3><?php _e( 'Secure PDFs – TNC FlipBook Addon', 'pdf-viewer-by-themencode');?></h3>
+                              <p><?php _e( 'Protect your PDF files from being downloaded, ensuring they remain view-only and secure when displayed with TNC FlipBook.', 'pdf-viewer-by-themencode');?></p>
+                        </div>
+                        <div class="item-btn">
+                            <a target="_blank" href="<?php echo esc_url($secure_url);?>"> <?php _e( 'Get Secure PDFs Addon', 'pdf-viewer-by-themencode');?> </a>
+                         </div>
+                    </div>
                   </div>
                </div>
          </div>
      </div>
 <?php
 }
+
+
+
 
 /**
  *    Add Shortocde in a menu under tnc pdf viewer meneu 

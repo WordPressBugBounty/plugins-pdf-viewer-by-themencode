@@ -899,7 +899,7 @@ function dashboard_design_markup() {
                      <h3>$installation_title</h3>
                 </div>
                 <div class="tnc-installtion-video">
-                <iframe width="100%" height="500" src="https://www.youtube.com/embed/9jzgb2qGtco" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe width="100%" height="500" src="https://www.youtube.com/embed/quDhGfTWur8?si=fkKv-qSs1HZ48AGo"" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </div>
             </div>
       </div>
@@ -1083,7 +1083,7 @@ function get_premium_design_markup() {
                      <h3>$installation_title</h3>
                 </div>
                 <div class="tnc-installtion-video">
-                <iframe width="100%" height="500" src="https://www.youtube.com/embed/9jzgb2qGtco" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe width="100%" height="500" src="https://www.youtube.com/embed/quDhGfTWur8?si=fkKv-qSs1HZ48AGo"" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </div>
             </div>
       </div>

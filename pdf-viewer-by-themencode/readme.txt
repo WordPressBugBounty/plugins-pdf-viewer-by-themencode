@@ -4,7 +4,7 @@ Tags: pdf, pdf viewer, pdf reader, pdf embed, pdf flipbook
 Requires at least: 4.6
 Tested up to: 6.7.2
 Requires PHP: 5.6
-Stable tag: 4.0.0
+Stable tag: 4.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
  
@@ -197,6 +197,9 @@ Documentation is available on this URL: https://docs.themencode.com/docs/pdf-vie
 7. PDF Viewer create screenshot
  
 == Changelog ==
+
+= 4.0.1 =
+* Introducing Secure PDFs addon for better protection with single use urls
 
 = 4.0.0 =
 * Slightly improved colors
