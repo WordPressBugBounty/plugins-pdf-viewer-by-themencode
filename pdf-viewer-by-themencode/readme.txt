@@ -2,9 +2,9 @@
 Contributors: ThemeNcode, abdulawal39
 Tags: pdf, pdf viewer, pdf reader, pdf embed, pdf flipbook
 Requires at least: 4.6
-Tested up to: 6.7.2
+Tested up to: 6.8
 Requires PHP: 5.6
-Stable tag: 4.0.1
+Stable tag: 4.1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
  
@@ -197,6 +197,9 @@ Documentation is available on this URL: https://docs.themencode.com/docs/pdf-vie
 7. PDF Viewer create screenshot
  
 == Changelog ==
+
+= 4.1.0 =
+* Fixed a warning load_textdomain happening with wp 6.7 and above
 
 = 4.0.1 =
 * Introducing Secure PDFs addon for better protection with single use urls

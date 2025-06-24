@@ -3,7 +3,7 @@
  * Plugin Name: TNC PDF viewer
  * Plugin URI: https://themencode.com/tncflipbook-preview/
  * Description: The best PDF Reader & FlipBook Plugin for WordPress since 2014, Powers up your WordPress website with a smart and modern PDF Reader & Highly customizable FlipBook.
- * Version: 4.0.1
+ * Version: 4.1.0
  * Author: ThemeNcode LLC
  * Author URI: https://themencode.com
  * Text Domain: pdf-viewer-by-themencode
@@ -22,7 +22,7 @@ if ( ! defined( 'WPINC' ) ) {
 // Define constants.
 define( 'PVFW_LITE_PLUGIN_NAME', 'TNC PDF viewer' );
 define( 'PVFW_LITE_PLUGIN_DIR', 'pdf-viewer-by-themencode' );
-define( 'PVFW_LITE_PLUGIN_VERSION', '4.0.1' );
+define( 'PVFW_LITE_PLUGIN_VERSION', '4.1.0' );
 define( 'PVFW_LITE_WEB_DIR', 'pdf-viewer-by-themencode/web' );
 define( 'PVFW_LITE_BUILD_DIR', 'pdf-viewer-by-themencode/build' );
 define( 'PVFW_LITE_RESOURCES_DIR', 'pdf-viewer-by-themencode/tnc-resources' );
@@ -33,15 +33,19 @@ function pvfw_lite_load_textdomain() {
 	load_plugin_textdomain( 'pdf-viewer-by-themencode', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' ); 
 }
 
+function pvfw_lite_include_csf_files() {
+	require_once plugin_dir_path( __FILE__ ) . '/includes/pvfw-csf-options.php';
+	require_once plugin_dir_path( __FILE__ ) . '/includes/pvfw-csf-custom-field.php';
+	require_once plugin_dir_path( __FILE__ ) . '/includes/pvfw-csf-sc.php';
+}
+add_action( 'init', 'pvfw_lite_include_csf_files', 1 );
+
 // Include files.
 require_once plugin_dir_path( __FILE__ ) . 'admin/tnc-pdf-viewer-options.php';
 require_once plugin_dir_path( __FILE__ ) . '/admin/TncPvfwCustomMetabox.php';
 require_once plugin_dir_path( __FILE__ ) . '/includes/helper-functions.php';
 require_once plugin_dir_path( __FILE__ ) . '/includes/cpt.php';
 require_once plugin_dir_path( __FILE__ ) . '/includes/csf/pvfwof-framework.php';
-require_once plugin_dir_path( __FILE__ ) . '/includes/pvfw-csf-options.php';
-require_once plugin_dir_path( __FILE__ ) . '/includes/pvfw-csf-custom-field.php';
-require_once plugin_dir_path( __FILE__ ) . '/includes/pvfw-csf-sc.php';
 require_once plugin_dir_path( __FILE__ ) . '/includes/pvfw-new-shortcodes.php';
 require_once plugin_dir_path( __FILE__ ) . '/includes/scripts.php';
 require_once plugin_dir_path( __FILE__ ) . 'admin/generate-shortcode.php';
