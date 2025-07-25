@@ -1,10 +1,10 @@
 === TNC PDF viewer ===
 Contributors: ThemeNcode, abdulawal39
-Tags: pdf, pdf viewer, pdf reader, pdf embed, pdf flipbook
+Tags: pdf, pdf viewer, pdf reader, pdf embed, pdf flipbook, pdf embedder, wordpress pdf viewer, pdf viewer wordpress
 Requires at least: 4.6
 Tested up to: 6.8
 Requires PHP: 5.6
-Stable tag: 4.1.0
+Stable tag: 4.1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
  
@@ -70,7 +70,7 @@ Furthermore, the plugin enables you to create links to the PDF viewer with custo
 * Disable Copying on Viewer/Flipbook
 * Hide download option
 
-<a href="https://codecanyon.net/item/pdf-viewer-for-wordpress/8182815/" target="_blank">Upgrade to Premium </a>
+<a href="https://codecanyon.net/item/pdf-viewer-for-wordpress/8182815/" target="_blank"> Get FlipBook & Audiobook Functionality & more with TNC FlipBook</a>
 
 <h3>Looking for a PDF Flipbook Cloud Hosted Solution?</h3>
 Check out the <a href="https://pdfflipbook.com/">PDFFlipBook.com</a> which allows you to host your PDF's on the cloud and embed or link from WordPress or any other kind of websites.
@@ -84,7 +84,7 @@ We have a Shopify PDF flipbook app check this out the <a href="https://apps.shop
 
 Display PDF Viewers in shelf style on any page or post. Have the viewer open in a PopUp or tab. It also includes a list and grid style display!
 
-<a href="https://themencode.com/display-pdf-viewer-for-wordpress-addon/" target="_blank">Get Display Addon</a>
+<a href="https://portal.themencode.com/downloads/display-pdf-viewer-for-wordpress/" target="_blank">Get Display Addon</a>
 
 **2. Preview Addon (Available on ThemeNcode)**
 
@@ -102,7 +102,7 @@ Using Elementor Builder? Get this addon to insert & manage PDF Viewers anywhere 
 
 Using Divi Builder? Get this addon to insert & manage PDF Viewers anywhere right from your Divi builder area.
 
-<a href="https://themencode.com/divi-pdf-viewer-for-wordpress/" target="_blank">Get Divi Addon</a>
+<a href="https://portal.themencode.com/downloads/divi-pdf-viewer-for-wordpress/" target="_blank">Get Divi Addon</a>
 
 **5. Addon for Avada Page builder (Available on CodeCanyon)**
 
@@ -171,7 +171,7 @@ Installation is simple as any other WordPress plugin.
 
 = Is there any Live Preview? =
 
-Yes, you can see it in action here: https://themencode.com/tncflipbook-preview/
+Yes, you can see it in action here: https://tncflipbook.com/live-preview/
 
 = Are there any Video instructions? =
  
@@ -197,6 +197,9 @@ Documentation is available on this URL: https://docs.themencode.com/docs/pdf-vie
 7. PDF Viewer create screenshot
  
 == Changelog ==
+
+= 4.1.1 =
+* Fixed a warning of undefined variable
 
 = 4.1.0 =
 * Fixed a warning load_textdomain happening with wp 6.7 and above

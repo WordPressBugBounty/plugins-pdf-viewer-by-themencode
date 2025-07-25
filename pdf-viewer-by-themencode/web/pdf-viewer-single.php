@@ -762,7 +762,6 @@ Thank You
           </a>
         </div>
         <?php do_action( 'tnc_pvfw_viewer_footer' ); ?>
-        <?php if( $pagenav != "off" ){ ?>
           <button class=" pvfw_page_prev" id="pvfw-previous-page" onclick="pvfw_prevpage()"><img src="<?php echo plugins_url()."/".PVFW_LITE_WEB_DIR."/"; ?>schemes/light-icons/toolbarButton-pagePrev.svg"  alt=""></button>
 
           <button class="pvfw_page_next" id="pvfw-next-page" onclick="pvfw_nextpage()"><img src="<?php echo plugins_url()."/".PVFW_LITE_WEB_DIR."/"; ?>schemes/light-icons/toolbarButton-pageNext.svg"  alt=""></button>
@@ -790,7 +789,6 @@ Thank You
             }
           });
         </script>
-        <?php } ?>
         <script type="text/javascript">
           // display return button when not loaded inside iframe.
           function inIframe () {
